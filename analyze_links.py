@@ -7,7 +7,7 @@ def download_files_from_bucket(bucket_name, local_directory):
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
 
-    # Create local directory if it does not exist
+    # Create local directory 
     if not os.path.exists(local_directory):
         os.makedirs(local_directory)
 
@@ -81,7 +81,7 @@ def calculate_pagerank(page_links, damping_factor=0.85, max_iterations=100, tol=
     return sorted(pageranks.items(), key=lambda x: x[1], reverse=True)[:5]
 
 if __name__ == "__main__":
-    # Replace 'your-bucket-name' with your actual bucket name
+    
     bucket_name = 'gracegcb-east1'
     local_directory = 'downloaded_pages'
 
